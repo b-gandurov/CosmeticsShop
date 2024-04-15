@@ -16,7 +16,7 @@ namespace CosmeticsShop.Commands
 
         public string Execute(List<string> parameters)
         {
-            //TODO: Validate parameters count
+            //TODO: Validate parameters count - bozhil
             string categoryName = parameters[0];
 
             Category category = this.cosmeticsRepository.FindCategoryByName(categoryName);

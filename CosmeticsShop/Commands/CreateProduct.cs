@@ -22,13 +22,13 @@ namespace CosmeticsShop.Commands
             string name = parameters[0];
             string brand = parameters[1];
 
-            // TODO: Validate price format
+            // TODO: Validate price format - bozhil
             double price = double.Parse(parameters[2], CultureInfo.InvariantCulture);
 
-            // TODO: Validate gender format
+            // TODO: Validate gender format - bozhil 
             GenderType gender = Enum.Parse<GenderType>(parameters[3], true);
 
-            // TODO: Ensure product name is unique
+            // TODO: Ensure product name is unique - bozhil
             this.cosmeticsRepository.CreateProduct(name, brand, price, gender);
 
             return $"Product with name {name} was created!";

@@ -25,7 +25,7 @@ namespace CosmeticsShop.Models
             }
             set
             {
-                // TODO: Validate name
+                // TODO: Validate name - bozhil
                 this.name = value;
             }
         }

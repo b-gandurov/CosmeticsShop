@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using CosmeticsShop.Helpers;
 
 namespace CosmeticsShop.Models
 {
+    
     public class Category
     {
+        private int MinNameValue = 3;
+        private int MaxNameValue = 10;
+        private string NameErrorMessage = "Name should be between {0} and {1} symbols";
+        private int MinBrandValue = 2;
+        private int MaxBrandValue = 10;
         private string name;
         private readonly List<Product> products;
 
@@ -22,7 +29,8 @@ namespace CosmeticsShop.Models
             }
             set
             {
-                // TODO: Validate value
+                //TODO - validate value - bozhil
+                StringValidators.StringLengthValidator(MinNameValue,MaxBrandValue,value,string.Format(NameErrorMessage,MinNameValue,MaxNameValue));
                 this.name = value;
             }
         }

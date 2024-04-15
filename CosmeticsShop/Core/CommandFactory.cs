@@ -8,7 +8,7 @@ namespace CosmeticsShop.Core
     {
         public ICommand CreateCommand(string commandTypeValue, CosmeticsRepository productRepository)
         {
-            // TODO: Validate command format
+            // TODO: Validate command format - bozhil
             CommandType commandType = Enum.Parse<CommandType>(commandTypeValue, true);
 
             switch (commandType)
@@ -18,11 +18,11 @@ namespace CosmeticsShop.Core
                 case CommandType.CreateProduct:
                     return new CreateProduct(productRepository);
                 case CommandType.AddProductToCategory:
-                    return new AddProductToCategory(productRepository);
+                        return new AddProductToCategory(productRepository);
                 case CommandType.ShowCategory:
                     return new ShowCategory(productRepository);
                 default:
-                    // TODO: Can we improve this code?
+                    // TODO: Can we improve this code? - bozhil 
                     return null;
             }
         }
